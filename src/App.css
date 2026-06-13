@@ -1,0 +1,353 @@
+#root {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+/* ── Header ── */
+.qartaj-header {
+  position: relative;
+  overflow: hidden;
+}
+
+.qartaj-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--qartaj-gold), var(--qartaj-red), var(--qartaj-gold));
+  background-size: 200% 100%;
+}
+
+.qartaj-title-ar {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.qartaj-title-en {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.qartaj-subtitle-ar {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.qartaj-subtitle-en {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+/* ── DoF Stats Cards ── */
+.qartaj-stat-card {
+  transition: all 0.2s ease;
+  border-radius: 12px;
+}
+
+.qartaj-stat-card:hover {
+  transform: translateY(-2px);
+}
+
+[data-theme="light"] .qartaj-stat-card,
+.chakra-ui-light .qartaj-stat-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .qartaj-stat-card:hover,
+.chakra-ui-light .qartaj-stat-card:hover {
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.15);
+  border-color: var(--qartaj-gold);
+}
+
+[data-theme="dark"] .qartaj-stat-card,
+.chakra-ui-dark .qartaj-stat-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .qartaj-stat-card:hover,
+.chakra-ui-dark .qartaj-stat-card:hover {
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
+  border-color: var(--qartaj-gold);
+}
+
+.qartaj-stat-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.qartaj-stat-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* ── DoF Badge ── */
+.qartaj-dof-badge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+/* ── Presets ── */
+.qartaj-presets-section {
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+
+[data-theme="light"] .qartaj-presets-section,
+.chakra-ui-light .qartaj-presets-section {
+  background: #fafafa;
+  border: 1px solid #eee;
+}
+
+[data-theme="dark"] .qartaj-presets-section,
+.chakra-ui-dark .qartaj-presets-section {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+}
+
+.qartaj-preset-group-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0;
+  margin-bottom: 0.5rem;
+}
+
+.qartaj-preset-btn {
+  font-size: 0.72rem !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-theme="light"] .qartaj-preset-btn,
+.chakra-ui-light .qartaj-preset-btn {
+  border-color: #d4af37 !important;
+  color: #8B0000 !important;
+  background: transparent !important;
+}
+
+[data-theme="light"] .qartaj-preset-btn:hover,
+.chakra-ui-light .qartaj-preset-btn:hover {
+  background: var(--qartaj-gold) !important;
+  color: var(--qartaj-black) !important;
+  border-color: var(--qartaj-gold) !important;
+}
+
+[data-theme="dark"] .qartaj-preset-btn,
+.chakra-ui-dark .qartaj-preset-btn {
+  border-color: #d4af37 !important;
+  color: #d4af37 !important;
+  background: transparent !important;
+}
+
+[data-theme="dark"] .qartaj-preset-btn:hover,
+.chakra-ui-dark .qartaj-preset-btn:hover {
+  background: var(--qartaj-gold) !important;
+  color: var(--qartaj-black) !important;
+  border-color: var(--qartaj-gold) !important;
+}
+
+.qartaj-preset-btn:active {
+  transform: scale(0.96) !important;
+}
+
+/* ── Slider Thumb ── */
+.qartaj-slider .chakra-slider__thumb {
+  border-width: 2px;
+  transition: transform 0.15s ease;
+}
+
+[data-theme="light"] .qartaj-slider .chakra-slider__thumb,
+.chakra-ui-light .qartaj-slider .chakra-slider__thumb {
+  border-color: var(--qartaj-gold);
+  background: white;
+}
+
+[data-theme="dark"] .qartaj-slider .chakra-slider__thumb,
+.chakra-ui-dark .qartaj-slider .chakra-slider__thumb {
+  border-color: var(--qartaj-gold);
+  background: #1a1a1a;
+}
+
+.qartaj-slider .chakra-slider__thumb:hover {
+  transform: scale(1.15);
+}
+
+.qartaj-slider .chakra-slider__filled-track {
+  background: linear-gradient(90deg, var(--qartaj-gold), #e6c84d) !important;
+}
+
+/* ── Control Labels ── */
+.qartaj-control-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ── Select / Dropdown ── */
+.qartaj-select {
+  border-radius: 8px !important;
+  font-size: 0.8rem !important;
+}
+
+/* ── Footer ── */
+.qartaj-footer {
+  padding: 2rem 1rem 2.5rem;
+  text-align: center;
+}
+
+[data-theme="light"] .qartaj-footer,
+.chakra-ui-light .qartaj-footer {
+  border-top: 1px solid #e2e8f0;
+}
+
+[data-theme="dark"] .qartaj-footer,
+.chakra-ui-dark .qartaj-footer {
+  border-top: 1px solid #2a2a2a;
+}
+
+.qartaj-footer-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--qartaj-gold);
+}
+
+.qartaj-footer-en {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+[data-theme="light"] .qartaj-footer-en,
+.chakra-ui-light .qartaj-footer-en {
+  color: #999;
+}
+
+[data-theme="dark"] .qartaj-footer-en,
+.chakra-ui-dark .qartaj-footer-en {
+  color: #666;
+}
+
+.qartaj-footer-heart {
+  color: var(--qartaj-red);
+  display: inline-block;
+}
+
+/* ── Hyperfocal Button ── */
+.qartaj-hyperfocal-btn {
+  border-radius: 8px !important;
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+}
+
+[data-theme="light"] .qartaj-hyperfocal-btn,
+.chakra-ui-light .qartaj-hyperfocal-btn {
+  color: var(--qartaj-red) !important;
+  border-color: var(--qartaj-red) !important;
+}
+
+[data-theme="dark"] .qartaj-hyperfocal-btn,
+.chakra-ui-dark .qartaj-hyperfocal-btn {
+  color: var(--qartaj-gold) !important;
+  border-color: var(--qartaj-gold) !important;
+}
+
+/* ── Radio ── */
+[data-theme="light"] .chakra-radio__control[data-checked],
+.chakra-ui-light .chakra-radio__control[data-checked] {
+  background: var(--qartaj-gold) !important;
+  border-color: var(--qartaj-gold) !important;
+}
+
+[data-theme="dark"] .chakra-radio__control[data-checked],
+.chakra-ui-dark .chakra-radio__control[data-checked] {
+  background: var(--qartaj-gold) !important;
+  border-color: var(--qartaj-gold) !important;
+}
+
+/* ── Dark mode toggle ── */
+.qartaj-theme-btn {
+  border-radius: 50% !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-theme="light"] .qartaj-theme-btn:hover,
+.chakra-ui-light .qartaj-theme-btn:hover {
+  background: rgba(212, 175, 55, 0.1) !important;
+  color: var(--qartaj-gold) !important;
+}
+
+[data-theme="dark"] .qartaj-theme-btn:hover,
+.chakra-ui-dark .qartaj-theme-btn:hover {
+  background: rgba(212, 175, 55, 0.15) !important;
+  color: var(--qartaj-gold) !important;
+}
+
+/* ── Divider ── */
+.qartaj-divider {
+  opacity: 0.5;
+}
+
+/* ── Help Button ── */
+.qartaj-help-btn {
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+[data-theme="light"] .qartaj-help-btn,
+.chakra-ui-light .qartaj-help-btn {
+  color: #666 !important;
+}
+
+[data-theme="light"] .qartaj-help-btn:hover,
+.chakra-ui-light .qartaj-help-btn:hover {
+  background: rgba(212, 175, 55, 0.1) !important;
+  color: var(--qartaj-gold) !important;
+}
+
+[data-theme="dark"] .qartaj-help-btn,
+.chakra-ui-dark .qartaj-help-btn {
+  color: #999 !important;
+}
+
+[data-theme="dark"] .qartaj-help-btn:hover,
+.chakra-ui-dark .qartaj-help-btn:hover {
+  background: rgba(212, 175, 55, 0.15) !important;
+  color: var(--qartaj-gold) !important;
+}
+
+/* ── Welcome Modal ── */
+.qartaj-modal-section {
+  transition: all 0.15s ease;
+}
+
+.qartaj-modal-section:hover {
+  border-color: var(--qartaj-gold) !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .qartaj-title-ar {
+    font-size: 1.3rem;
+  }
+
+  .qartaj-title-en {
+    font-size: 0.75rem;
+  }
+
+  .qartaj-presets-section {
+    padding: 0.75rem;
+  }
+}
